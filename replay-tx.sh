@@ -80,7 +80,86 @@ case "$(echo "$addr" | cut -d ':' -f1)" in
 		network=mainnet
 		chain_id=1
 		;;
-	# TODO(nlordell): add more networks...
+	oeth)
+		network=optimism
+		chain_id=10
+		;;
+	bnb)
+		network=bsc
+		chain_id=56
+		;;
+	gno)
+		network=gnosis-chain
+		chain_id=100
+		;;
+	pol)
+		network=polygon
+		chain_id=137
+		;;
+	okb)
+		network=xlayer
+		chain_id=196
+		;;
+	zksync)
+		network=zksync
+		chain_id=324
+		;;
+	wc)
+		network=worldchain
+		chain_id=480
+		;;
+	zkevm)
+		network=zkevm
+		chain_id=1101
+		;;
+	mnt)
+		network=mantle
+		chain_id=5000
+		;;
+	base)
+		network=base
+		chain_id=8453
+		;;
+	chiado)
+		network=chiado
+		chain_id=10200
+		;;
+	arb1)
+		network=arbitrum
+		chain_id=42161
+		;;
+	celo)
+		network=celo
+		chain_id=42220
+		;;
+	avax)
+		network=avalanche
+		chain_id=43114
+		;;
+	linea)
+		network=linea
+		chain_id=59144
+		;;
+	blast)
+		network=blast
+		chain_id=81457
+		;;
+	basesep)
+		network=base-sepolia
+		chain_id=84532
+		;;
+        scr)
+		network=scroll
+		chain_id=534352
+		;;
+	sep)
+		network=sepolia
+		chain_id=11155111
+		;;
+	aurora)
+		network=aurora
+		chain_id=1313161554
+		;;
 	*) fail "unknown network" ;;
 esac
 safe="$(echo "$addr" | cut -d ':' -f2)"
